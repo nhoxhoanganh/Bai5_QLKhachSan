@@ -23,7 +23,7 @@ namespace Bai5_QLKhachSan
         int chon = 0;
         void KhoaDieuKhien()
         {
-            txtMaphong.Enabled=txtTenphong.Enabled=txtLoaiphong.Enabled= false;
+            txtTenphong.Enabled=txtLoaiphong.Enabled= false;
             btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = true;
             btnLuu.Enabled = false;
 
@@ -31,7 +31,7 @@ namespace Bai5_QLKhachSan
 
         void MoDieuKhien()
         {
-            txtMaphong.Enabled=txtTenphong.Enabled=txtLoaiphong.Enabled = true;
+            txtTenphong.Enabled=txtLoaiphong.Enabled = true;
             btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = false;
             btnLuu.Enabled = true;
         }

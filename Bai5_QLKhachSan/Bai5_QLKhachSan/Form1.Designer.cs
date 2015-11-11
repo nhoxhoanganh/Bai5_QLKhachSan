@@ -145,6 +145,7 @@
             // 
             // txtMaphong
             // 
+            this.txtMaphong.Enabled = false;
             this.txtMaphong.Location = new System.Drawing.Point(149, 20);
             this.txtMaphong.Name = "txtMaphong";
             this.txtMaphong.Size = new System.Drawing.Size(136, 20);
@@ -269,6 +270,7 @@
             this.txttk_Maphong.Name = "txttk_Maphong";
             this.txttk_Maphong.Size = new System.Drawing.Size(136, 20);
             this.txttk_Maphong.TabIndex = 6;
+            this.txttk_Maphong.TextChanged += new System.EventHandler(this.txttk_Maphong_TextChanged);
             // 
             // label3
             // 
