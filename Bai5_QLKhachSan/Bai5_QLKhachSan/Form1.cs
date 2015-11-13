@@ -26,7 +26,7 @@ namespace Bai5_QLKhachSan
             txtTenphong.Enabled=txtLoaiphong.Enabled= false;
             btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = true;
             btnLuu.Enabled = false;
-
+            btnDodung.Enabled = false;
         }
 
         void MoDieuKhien()
@@ -34,6 +34,7 @@ namespace Bai5_QLKhachSan
             txtTenphong.Enabled=txtLoaiphong.Enabled = true;
             btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = false;
             btnLuu.Enabled = true;
+            btnDodung.Enabled = true;
         }
 
         void SetNull()
@@ -103,11 +104,13 @@ namespace Bai5_QLKhachSan
 
         private void dgvPHONG_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            btnDodung.Enabled = true;
             try
             {
                 txtMaphong.Text = dgvPhong.Rows[e.RowIndex].Cells[0].Value.ToString();
                 txtTenphong.Text = dgvPhong.Rows[e.RowIndex].Cells[1].Value.ToString();
                 txtLoaiphong.Text = dgvPhong.Rows[e.RowIndex].Cells[2].Value.ToString();
+              
             }
             catch { }
         }
@@ -130,6 +133,12 @@ namespace Bai5_QLKhachSan
         private void txttk_Loaiphong_TextChanged(object sender, EventArgs e)
         {
             dgvPhong.DataSource = tk.TKPhong_LoaiPhong(txttk_loaiphong.Text);
+        }
+
+        private void btnDodung_Click(object sender, EventArgs e)
+        {
+            frmDoDungTheoPhong dodung = new frmDoDungTheoPhong();
+            dodung.Show();
         }
     }
 }

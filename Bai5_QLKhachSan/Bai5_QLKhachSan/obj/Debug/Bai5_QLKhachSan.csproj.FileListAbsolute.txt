@@ -11,3 +11,4 @@ E:\Clone\Bai5_QLKhachSan\Bai5_QLKhachSan\Bai5_QLKhachSan\bin\Debug\KetNoiDB.pdb
 E:\Clone\Bai5_QLKhachSan\Bai5_QLKhachSan\Bai5_QLKhachSan\obj\Debug\Bai5_QLKhachSan.exe
 E:\Clone\Bai5_QLKhachSan\Bai5_QLKhachSan\Bai5_QLKhachSan\obj\Debug\Bai5_QLKhachSan.pdb
 E:\Clone\Bai5_QLKhachSan\Bai5_QLKhachSan\Bai5_QLKhachSan\obj\Debug\Bai5_QLKhachSan.frmPHONG.resources
+E:\Clone\Bai5_QLKhachSan\Bai5_QLKhachSan\Bai5_QLKhachSan\obj\Debug\Bai5_QLKhachSan.frmDoDungTheoPhong.resources

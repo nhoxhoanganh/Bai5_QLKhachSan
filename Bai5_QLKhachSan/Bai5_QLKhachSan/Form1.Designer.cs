@@ -53,6 +53,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnDodung = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhong)).BeginInit();
@@ -61,6 +62,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnDodung);
             this.groupBox1.Controls.Add(this.btnHuy);
             this.groupBox1.Controls.Add(this.btnLuu);
             this.groupBox1.Controls.Add(this.btnXoa);
@@ -299,6 +301,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Tìm kiếm theo : ";
             // 
+            // btnDodung
+            // 
+            this.btnDodung.Location = new System.Drawing.Point(149, 119);
+            this.btnDodung.Name = "btnDodung";
+            this.btnDodung.Size = new System.Drawing.Size(136, 23);
+            this.btnDodung.TabIndex = 53;
+            this.btnDodung.Text = "Đồ dùng trong phòng";
+            this.btnDodung.UseVisualStyleBackColor = true;
+            this.btnDodung.Click += new System.EventHandler(this.btnDodung_Click);
+            // 
             // frmPHONG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -347,6 +359,7 @@
         private System.Windows.Forms.TextBox txttk_loaiphong;
         private System.Windows.Forms.TextBox txttk_Maphong;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnDodung;
     }
 }
 

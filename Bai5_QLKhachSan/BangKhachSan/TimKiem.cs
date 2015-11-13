@@ -55,5 +55,19 @@ namespace BangKhachSan
             da.Fill(dt);
             return dt;
         }
+        //Show đồ dùng trong phòng theo mã
+        public DataTable ShowDoDung_Ma(string MaPhong)
+        {
+            string sql = "SELECT * FROM tblPhong WHERE MaPhong=@MaPhong";
+            DataTable dt = new DataTable();
+            SqlConnection con = new SqlConnection(KetNoi.connect());
+            con.Open();
+            SqlCommand cmd = new SqlCommand(sql, con);
+            SqlDataAdapter da = new SqlDataAdapter();
+            cmd.Parameters.AddWithValue("@MaPhong", MaPhong);
+            da.SelectCommand = cmd;
+            da.Fill(dt);
+            return dt;
+        }
     }
 }
