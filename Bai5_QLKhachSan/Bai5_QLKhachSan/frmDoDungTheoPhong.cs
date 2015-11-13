@@ -15,9 +15,32 @@ namespace Bai5_QLKhachSan
 {
     public partial class frmDoDungTheoPhong : Form
     {
-        public frmDoDungTheoPhong()
+        string ma;
+
+        public frmDoDungTheoPhong(string _ma)
         {
             InitializeComponent();
+            ma = _ma;
+        }
+
+        BUS_DoDung dodung = new BUS_DoDung();
+        private void frmDoDungTheoPhong_Load(object sender, EventArgs e)
+        {
+            HienThi("where MaPhong = '" + ma + "'");
+        }
+        public void HienThi(string DieuKien) 
+        {
+            txtMaPhong.Text = ma;
+            dgvDodung.DataSource = dodung.HienThiDoDung(DieuKien);
+        }
+
+        private void dgvDodung_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtMaDoDung.Text = dgvDodung.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtTen.Text = dgvDodung.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txtSoLuong.Text = dgvDodung.Rows[e.RowIndex].Cells[2].Value.ToString();
+            txtDonVi.Text = dgvDodung.Rows[e.RowIndex].Cells[3].Value.ToString();
+            txtTinhTrang.Text = dgvDodung.Rows[e.RowIndex].Cells[4].Value.ToString();
         }
     }
 }

@@ -137,7 +137,7 @@ namespace Bai5_QLKhachSan
 
         private void btnDodung_Click(object sender, EventArgs e)
         {
-            frmDoDungTheoPhong dodung = new frmDoDungTheoPhong();
+            frmDoDungTheoPhong dodung = new frmDoDungTheoPhong(txtMaphong.Text);
             dodung.Show();
         }
     }

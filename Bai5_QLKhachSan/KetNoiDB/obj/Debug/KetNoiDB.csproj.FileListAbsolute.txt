@@ -3,3 +3,8 @@ E:\Clone\Bai5_QLKhachSan\Bai5_QLKhachSan\KetNoiDB\bin\Debug\KetNoiDB.pdb
 E:\Clone\Bai5_QLKhachSan\Bai5_QLKhachSan\KetNoiDB\obj\Debug\KetNoiDB.csprojResolveAssemblyReference.cache
 E:\Clone\Bai5_QLKhachSan\Bai5_QLKhachSan\KetNoiDB\obj\Debug\KetNoiDB.dll
 E:\Clone\Bai5_QLKhachSan\Bai5_QLKhachSan\KetNoiDB\obj\Debug\KetNoiDB.pdb
+D:\dung\Kì I - Năm 4\Thực tập nhóm\save\Bai5_QLKhachSan\Bai5_QLKhachSan\KetNoiDB\bin\Debug\KetNoiDB.dll
+D:\dung\Kì I - Năm 4\Thực tập nhóm\save\Bai5_QLKhachSan\Bai5_QLKhachSan\KetNoiDB\bin\Debug\KetNoiDB.pdb
+D:\dung\Kì I - Năm 4\Thực tập nhóm\save\Bai5_QLKhachSan\Bai5_QLKhachSan\KetNoiDB\obj\Debug\KetNoiDB.csprojResolveAssemblyReference.cache
+D:\dung\Kì I - Năm 4\Thực tập nhóm\save\Bai5_QLKhachSan\Bai5_QLKhachSan\KetNoiDB\obj\Debug\KetNoiDB.dll
+D:\dung\Kì I - Năm 4\Thực tập nhóm\save\Bai5_QLKhachSan\Bai5_QLKhachSan\KetNoiDB\obj\Debug\KetNoiDB.pdb
