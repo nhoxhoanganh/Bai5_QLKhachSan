@@ -13,3 +13,8 @@ E:\Githubs\Bai5_QLKhachSan\Bai5_QLKhachSan\KetNoiDB\bin\Debug\KetNoiDB.pdb
 E:\Githubs\Bai5_QLKhachSan\Bai5_QLKhachSan\KetNoiDB\obj\Debug\KetNoiDB.csprojResolveAssemblyReference.cache
 E:\Githubs\Bai5_QLKhachSan\Bai5_QLKhachSan\KetNoiDB\obj\Debug\KetNoiDB.dll
 E:\Githubs\Bai5_QLKhachSan\Bai5_QLKhachSan\KetNoiDB\obj\Debug\KetNoiDB.pdb
+E:\Hoc tap\Ki I 2015-2016\Thuc tap nhom\Bai5_QLKhachSan\Bai5_QLKhachSan\KetNoiDB\bin\Debug\KetNoiDB.dll
+E:\Hoc tap\Ki I 2015-2016\Thuc tap nhom\Bai5_QLKhachSan\Bai5_QLKhachSan\KetNoiDB\bin\Debug\KetNoiDB.pdb
+E:\Hoc tap\Ki I 2015-2016\Thuc tap nhom\Bai5_QLKhachSan\Bai5_QLKhachSan\KetNoiDB\obj\Debug\KetNoiDB.csprojResolveAssemblyReference.cache
+E:\Hoc tap\Ki I 2015-2016\Thuc tap nhom\Bai5_QLKhachSan\Bai5_QLKhachSan\KetNoiDB\obj\Debug\KetNoiDB.dll
+E:\Hoc tap\Ki I 2015-2016\Thuc tap nhom\Bai5_QLKhachSan\Bai5_QLKhachSan\KetNoiDB\obj\Debug\KetNoiDB.pdb
