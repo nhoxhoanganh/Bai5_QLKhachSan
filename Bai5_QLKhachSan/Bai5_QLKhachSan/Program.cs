@@ -16,7 +16,11 @@ namespace Bai5_QLKhachSan
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
             Application.Run(new frmDangNhap());
+=======
+            Application.Run(new frmKhachThue());
+>>>>>>> 6ff0ffbcbb15cf2f141e0dfe186f292b68047c89
         }
     }
 }

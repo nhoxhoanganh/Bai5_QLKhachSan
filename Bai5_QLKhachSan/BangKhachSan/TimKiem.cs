@@ -69,5 +69,50 @@ namespace BangKhachSan
             da.Fill(dt);
             return dt;
         }
+
+        // tìm kiếm khách theo mã khách
+        public DataTable TKKhach_MaKhach(string MaKhach)
+        {
+            string sql = "SELECT * FROM tblKhachThuePhong WHERE MaKH LIKE N'%' + @MaKH + '%'";
+            DataTable dt = new DataTable();
+            SqlConnection con = new SqlConnection(KetNoi.connect());
+            con.Open();
+            SqlCommand cmd = new SqlCommand(sql, con);
+            SqlDataAdapter da = new SqlDataAdapter();
+            cmd.Parameters.AddWithValue("@MaKH", MaKhach);
+            da.SelectCommand = cmd;
+            da.Fill(dt);
+            return dt;
+        }
+
+        // tìm kiếm khách theo họ tên
+        public DataTable TKKhach_TenKhach(string HoTen)
+        {
+            string sql = "SELECT * FROM tblKhachThuePhong WHERE TenKH LIKE N'%' + @TenKH + '%'";
+            DataTable dt = new DataTable();
+            SqlConnection con = new SqlConnection(KetNoi.connect());
+            con.Open();
+            SqlCommand cmd = new SqlCommand(sql, con);
+            SqlDataAdapter da = new SqlDataAdapter();
+            cmd.Parameters.AddWithValue("@TenKH", HoTen);
+            da.SelectCommand = cmd;
+            da.Fill(dt);
+            return dt;
+        }
+
+        // tìm kiếm khách theo CMND
+        public DataTable TKKhach_CMND(string CMND)
+        {
+            string sql = "SELECT * FROM tblKhachThuePhong WHERE CMND LIKE N'%' + @CMND + '%'";
+            DataTable dt = new DataTable();
+            SqlConnection con = new SqlConnection(KetNoi.connect());
+            con.Open();
+            SqlCommand cmd = new SqlCommand(sql, con);
+            SqlDataAdapter da = new SqlDataAdapter();
+            cmd.Parameters.AddWithValue("@CMND", CMND);
+            da.SelectCommand = cmd;
+            da.Fill(dt);
+            return dt;
+        }
     }
 }

@@ -19,3 +19,10 @@ E:\Githubs\Bai5_QLKhachSan\Bai5_QLKhachSan\BangKhachSan\bin\Debug\KetNoiDB.pdb
 E:\Githubs\Bai5_QLKhachSan\Bai5_QLKhachSan\BangKhachSan\obj\Debug\BangKhachSan.csprojResolveAssemblyReference.cache
 E:\Githubs\Bai5_QLKhachSan\Bai5_QLKhachSan\BangKhachSan\obj\Debug\BangKhachSan.dll
 E:\Githubs\Bai5_QLKhachSan\Bai5_QLKhachSan\BangKhachSan\obj\Debug\BangKhachSan.pdb
+E:\Hoc tap\Ki I 2015-2016\Thuc tap nhom\Bai5_QLKhachSan\Bai5_QLKhachSan\BangKhachSan\bin\Debug\BangKhachSan.dll
+E:\Hoc tap\Ki I 2015-2016\Thuc tap nhom\Bai5_QLKhachSan\Bai5_QLKhachSan\BangKhachSan\bin\Debug\BangKhachSan.pdb
+E:\Hoc tap\Ki I 2015-2016\Thuc tap nhom\Bai5_QLKhachSan\Bai5_QLKhachSan\BangKhachSan\bin\Debug\KetNoiDB.dll
+E:\Hoc tap\Ki I 2015-2016\Thuc tap nhom\Bai5_QLKhachSan\Bai5_QLKhachSan\BangKhachSan\bin\Debug\KetNoiDB.pdb
+E:\Hoc tap\Ki I 2015-2016\Thuc tap nhom\Bai5_QLKhachSan\Bai5_QLKhachSan\BangKhachSan\obj\Debug\BangKhachSan.csprojResolveAssemblyReference.cache
+E:\Hoc tap\Ki I 2015-2016\Thuc tap nhom\Bai5_QLKhachSan\Bai5_QLKhachSan\BangKhachSan\obj\Debug\BangKhachSan.dll
+E:\Hoc tap\Ki I 2015-2016\Thuc tap nhom\Bai5_QLKhachSan\Bai5_QLKhachSan\BangKhachSan\obj\Debug\BangKhachSan.pdb
