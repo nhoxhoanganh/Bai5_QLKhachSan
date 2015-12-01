@@ -55,3 +55,5 @@ E:\Hoc tap\Ki I 2015-2016\Thuc tap nhom\Bai5_QLKhachSan\Bai5_QLKhachSan\Bai5_QLK
 E:\Hoc tap\Ki I 2015-2016\Thuc tap nhom\Bai5_QLKhachSan\Bai5_QLKhachSan\Bai5_QLKhachSan\obj\Debug\Bai5_QLKhachSan.frmKhachThue.resources
 E:\Hoc tap\Ki I 2015-2016\Thuc tap nhom\Bai5_QLKhachSan\Bai5_QLKhachSan\Bai5_QLKhachSan\obj\Debug\Bai5_QLKhachSan.Properties.Resources.resources
 E:\Hoc tap\Ki I 2015-2016\Thuc tap nhom\Bai5_QLKhachSan\Bai5_QLKhachSan\Bai5_QLKhachSan\obj\Debug\Bai5_QLKhachSan.csproj.GenerateResource.Cache
+E:\Clone\Bai5_QLKhachSan\Bai5_QLKhachSan\Bai5_QLKhachSan\obj\Debug\Bai5_QLKhachSan.frmDangNhap.resources
+E:\Clone\Bai5_QLKhachSan\Bai5_QLKhachSan\Bai5_QLKhachSan\obj\Debug\Bai5_QLKhachSan.frmKhachThue.resources
