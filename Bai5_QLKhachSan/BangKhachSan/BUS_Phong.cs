@@ -21,7 +21,15 @@ namespace BangKhachSan
             da.Fill(dt);
             return dt;
         }
-
+        public DataTable HienThiPhongTrong()
+        {
+            string sql = "SELECT * FROM tblPhong where TrangThai = N'Empty'";
+            DataTable dt = new DataTable();
+            SqlConnection con = new SqlConnection(KetNoi.connect());
+            SqlDataAdapter da = new SqlDataAdapter(sql, con);
+            da.Fill(dt);
+            return dt;
+        }
         public void ThemPhong(string TenPhong,string LoaiPhong)
         {
             string sql = "ADDPhong";

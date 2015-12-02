@@ -10,6 +10,7 @@ namespace BangKhachSan
 {
     public class BUS_KhachThuePhong
     {
+        public string MaKH = "";
         KetNoi cn = new KetNoi();
 
         public DataTable HienThiKhach()
@@ -21,7 +22,15 @@ namespace BangKhachSan
             da.Fill(dt);
             return dt;
         }
-
+        public DataTable HienThiKhach_2TC()
+        {
+            string sql = "SELECT MaKH, TenKH FROM tblKhachThuePhong";
+            DataTable dt = new DataTable();
+            SqlConnection con = new SqlConnection(KetNoi.connect());
+            SqlDataAdapter da = new SqlDataAdapter(sql, con);
+            da.Fill(dt);
+            return dt;
+        }
         public void ThemKhach(string TenKH, string GT,string NgaySinh,string CMND)
         {
             string sql = "ADDKhachThuePhong";
