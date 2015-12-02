@@ -13,7 +13,16 @@ namespace BangKhachSan
     {
         public DataTable HienThiDoDung(string DieuKien)
         {
-            string sql = "SELECT * FROM tblDoDung " + DieuKien;
+            string sql = "SELECT * FROM DoDung " + DieuKien;
+            DataTable dt = new DataTable();
+            SqlConnection con = new SqlConnection(KetNoi.connect());
+            SqlDataAdapter da = new SqlDataAdapter(sql, con);
+            da.Fill(dt);
+            return dt;
+        }
+        public DataTable HienThiDoDung2()
+        {
+            string sql = "SELECT * FROM DoDung";
             DataTable dt = new DataTable();
             SqlConnection con = new SqlConnection(KetNoi.connect());
             SqlDataAdapter da = new SqlDataAdapter(sql, con);

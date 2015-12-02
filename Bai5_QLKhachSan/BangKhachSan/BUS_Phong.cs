@@ -29,8 +29,10 @@ namespace BangKhachSan
             con.Open();
             SqlCommand cmd = new SqlCommand(sql, con);
             cmd.CommandType = CommandType.StoredProcedure;
+
             cmd.Parameters.AddWithValue("@TenPhong", TenPhong);
             cmd.Parameters.AddWithValue("@LoaiPhong", LoaiPhong);
+
             cmd.ExecuteNonQuery();
             cmd.Dispose();
             con.Close();
@@ -43,10 +45,12 @@ namespace BangKhachSan
             con.Open();
             SqlCommand cmd = new SqlCommand(sql, con);
             cmd.CommandType = CommandType.StoredProcedure;
+
             cmd.Parameters.AddWithValue("@MaPhong", MaPhong);
             cmd.Parameters.AddWithValue("@TenPhong", TenPhong);
             cmd.Parameters.AddWithValue("@LoaiPhong", LoaiPhong);
             cmd.ExecuteNonQuery();
+
             cmd.Dispose();
             con.Close();
         }
