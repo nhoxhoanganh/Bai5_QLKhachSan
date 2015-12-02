@@ -21,7 +21,16 @@ namespace BangKhachSan
             da.Fill(dt);
             return dt;
         }
-
+        public string GiaPhong(string maphong)
+        {
+            string sql = "SELECT GiaPhong FROM tblPhong";
+            DataTable dt = new DataTable();
+            SqlConnection con = new SqlConnection(KetNoi.connect());
+            SqlDataAdapter da = new SqlDataAdapter(sql, con);
+            da.Fill(dt);
+            string gia = dt.Rows[0].ItemArray[0].ToString();
+            return gia;
+        }
         public void ThemPhong(string TenPhong,string LoaiPhong)
         {
             string sql = "ADDPhong";

@@ -45,12 +45,23 @@ namespace Bai5_QLKhachSan
 
         private void btnTinhTien_Click(object sender, EventArgs e)
         {
-
+            float tongtien = 0;
+            for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+            {
+                tongtien += long.Parse(dataGridView1.Rows[i].Cells[2].Value.ToString());
+            }
+            txtTien.Text = tongtien.ToString();
+            TimeSpan time = dateTimePicker2.Value - dateTimePicker1.Value;
+            string gia = phong.GiaPhong(cboTenPhong.SelectedValue.ToString());            
+            tongtien += long.Parse(gia) * float.Parse(time.TotalHours.ToString());
+            tongtien = (long)tongtien;
+            txtTien.Text = tongtien.ToString();
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-
+            hd.SuaHD(cboMaHD.Text, long.Parse(txtTien.Text), dateTimePicker2.Value);
+            MessageBox.Show("Thêm dữ liệu thành công");
         }
     }
 }

@@ -32,18 +32,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btnTim = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtTien = new System.Windows.Forms.TextBox();
             this.btnTinhTien = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cboMaHD = new System.Windows.Forms.ComboBox();
             this.cboTenPhong = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -88,6 +88,24 @@
             this.dataGridView1.Size = new System.Drawing.Size(330, 175);
             this.dataGridView1.TabIndex = 3;
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "MaDV";
+            this.Column1.HeaderText = "Mã DV";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "TenDV";
+            this.Column2.HeaderText = "Tên DV";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "Gia";
+            this.Column3.HeaderText = "Giá";
+            this.Column3.Name = "Column3";
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -128,7 +146,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.CustomFormat = "yyyy/MM/dd";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dateTimePicker1.Location = new System.Drawing.Point(434, 8);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(143, 20);
@@ -137,18 +155,18 @@
             // dateTimePicker2
             // 
             this.dateTimePicker2.CustomFormat = "yyyy/MM/dd";
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dateTimePicker2.Location = new System.Drawing.Point(434, 38);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(143, 20);
             this.dateTimePicker2.TabIndex = 12;
             // 
-            // textBox2
+            // txtTien
             // 
-            this.textBox2.Location = new System.Drawing.Point(434, 157);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(134, 20);
-            this.textBox2.TabIndex = 13;
+            this.txtTien.Location = new System.Drawing.Point(434, 157);
+            this.txtTien.Name = "txtTien";
+            this.txtTien.Size = new System.Drawing.Size(134, 20);
+            this.txtTien.TabIndex = 13;
             // 
             // btnTinhTien
             // 
@@ -169,24 +187,6 @@
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "MaDV";
-            this.Column1.HeaderText = "Mã DV";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "TenDV";
-            this.Column2.HeaderText = "Tên DV";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "Gia";
-            this.Column3.HeaderText = "Giá";
-            this.Column3.Name = "Column3";
             // 
             // cboMaHD
             // 
@@ -213,7 +213,7 @@
             this.Controls.Add(this.cboMaHD);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnTinhTien);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtTien);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.btnTim);
@@ -245,7 +245,7 @@
         private System.Windows.Forms.Button btnTim;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtTien;
         private System.Windows.Forms.Button btnTinhTien;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;

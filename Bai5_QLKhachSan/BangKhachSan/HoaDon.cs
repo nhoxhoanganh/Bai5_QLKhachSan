@@ -22,5 +22,19 @@ namespace BangKhachSan
             da.Fill(dt);
             return dt;
         }
+        public void SuaHD(string MaHD, long TongTien, DateTime TGTra)
+        {
+            string sql = "SuaHD";
+            SqlConnection con = new SqlConnection(KetNoi.connect());
+            con.Open();
+            SqlCommand cmd = new SqlCommand(sql, con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@MaHD", MaHD);
+            cmd.Parameters.AddWithValue("@TongTien", TongTien);
+            cmd.Parameters.AddWithValue("@TGTra", TGTra);
+            cmd.ExecuteNonQuery();
+            cmd.Dispose();
+            con.Close();
+        }
     }
 }
