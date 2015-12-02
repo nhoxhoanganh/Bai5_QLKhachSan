@@ -37,7 +37,14 @@ namespace Bai5_QLKhachSan
 
         private void trảPhòngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            frmTraPhong frm = new frmTraPhong();
+            frm.Show();
+        }
+
+        private void thuêPhòngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmChoThuePhong frm = new frmChoThuePhong();
+            frm.Show();
         }
     }
 }

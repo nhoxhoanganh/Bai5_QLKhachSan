@@ -69,3 +69,4 @@ D:\dung\Kì I - Năm 4\Thực tập nhóm\save\Bai5_QLKhachSan\Bai5_QLKhachSan\B
 D:\dung\Kì I - Năm 4\Thực tập nhóm\save\Bai5_QLKhachSan\Bai5_QLKhachSan\Bai5_QLKhachSan\obj\Debug\Bai5_QLKhachSan.frmQuanLyKhachSan.resources
 D:\dung\Kì I - Năm 4\Thực tập nhóm\save\Bai5_QLKhachSan\Bai5_QLKhachSan\Bai5_QLKhachSan\obj\Debug\Bai5_QLKhachSan.frmTraPhong.resources
 >>>>>>> b744397b4495647afc6d3748bbf03b5175552a95
+E:\Githubs\Bai5_QLKhachSan\Bai5_QLKhachSan\Bai5_QLKhachSan\obj\Debug\Bai5_QLKhachSan.frmTraPhong.resources

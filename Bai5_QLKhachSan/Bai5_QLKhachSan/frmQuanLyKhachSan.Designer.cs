@@ -115,6 +115,7 @@
             this.thuêPhòngToolStripMenuItem.Name = "thuêPhòngToolStripMenuItem";
             this.thuêPhòngToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.thuêPhòngToolStripMenuItem.Text = "Thuê Phòng";
+            this.thuêPhòngToolStripMenuItem.Click += new System.EventHandler(this.thuêPhòngToolStripMenuItem_Click);
             // 
             // trảPhòngToolStripMenuItem
             // 

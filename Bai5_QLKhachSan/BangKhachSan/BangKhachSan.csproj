@@ -44,12 +44,9 @@
     <Compile Include="BUS_DoDungTrongPhong.cs" />
     <Compile Include="BUS_KhachThuePhong.cs" />
     <Compile Include="BUS_Phong.cs" />
-<<<<<<< HEAD
     <Compile Include="BUS_ThuePhong.cs" />
-=======
     <Compile Include="CTHD.cs" />
     <Compile Include="HoaDon.cs" />
->>>>>>> b744397b4495647afc6d3748bbf03b5175552a95
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TimKiem.cs" />
   </ItemGroup>
