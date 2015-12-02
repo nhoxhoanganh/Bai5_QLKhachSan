@@ -31,15 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQuanLyKhachSan));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.quảnLýToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hoạtĐộngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hướngDẫnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýPhòngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýĐồDùngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýKháchThuêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hoạtĐộngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thuêPhòngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trảPhòngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hướngDẫnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBoxBackground = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBackground)).BeginInit();
@@ -68,21 +68,6 @@
             this.quảnLýToolStripMenuItem.Name = "quảnLýToolStripMenuItem";
             this.quảnLýToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
             this.quảnLýToolStripMenuItem.Text = "Quản Lý";
-            // 
-            // hoạtĐộngToolStripMenuItem
-            // 
-            this.hoạtĐộngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.thuêPhòngToolStripMenuItem,
-            this.trảPhòngToolStripMenuItem});
-            this.hoạtĐộngToolStripMenuItem.Name = "hoạtĐộngToolStripMenuItem";
-            this.hoạtĐộngToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
-            this.hoạtĐộngToolStripMenuItem.Text = "Hoạt Động";
-            // 
-            // hướngDẫnToolStripMenuItem
-            // 
-            this.hướngDẫnToolStripMenuItem.Name = "hướngDẫnToolStripMenuItem";
-            this.hướngDẫnToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
-            this.hướngDẫnToolStripMenuItem.Text = "Hướng Dẫn";
             // 
             // quảnLýPhòngToolStripMenuItem
             // 
@@ -116,6 +101,15 @@
             this.thoátToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
             this.thoátToolStripMenuItem.Text = "Thoát";
             // 
+            // hoạtĐộngToolStripMenuItem
+            // 
+            this.hoạtĐộngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.thuêPhòngToolStripMenuItem,
+            this.trảPhòngToolStripMenuItem});
+            this.hoạtĐộngToolStripMenuItem.Name = "hoạtĐộngToolStripMenuItem";
+            this.hoạtĐộngToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
+            this.hoạtĐộngToolStripMenuItem.Text = "Hoạt Động";
+            // 
             // thuêPhòngToolStripMenuItem
             // 
             this.thuêPhòngToolStripMenuItem.Name = "thuêPhòngToolStripMenuItem";
@@ -127,6 +121,13 @@
             this.trảPhòngToolStripMenuItem.Name = "trảPhòngToolStripMenuItem";
             this.trảPhòngToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.trảPhòngToolStripMenuItem.Text = "Trả Phòng";
+            this.trảPhòngToolStripMenuItem.Click += new System.EventHandler(this.trảPhòngToolStripMenuItem_Click);
+            // 
+            // hướngDẫnToolStripMenuItem
+            // 
+            this.hướngDẫnToolStripMenuItem.Name = "hướngDẫnToolStripMenuItem";
+            this.hướngDẫnToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
+            this.hướngDẫnToolStripMenuItem.Text = "Hướng Dẫn";
             // 
             // pictureBoxBackground
             // 

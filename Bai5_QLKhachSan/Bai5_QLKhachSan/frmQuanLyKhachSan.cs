@@ -34,5 +34,10 @@ namespace Bai5_QLKhachSan
             frmKhachThue frm = new frmKhachThue();
             frm.Show();
         }
+
+        private void trảPhòngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
