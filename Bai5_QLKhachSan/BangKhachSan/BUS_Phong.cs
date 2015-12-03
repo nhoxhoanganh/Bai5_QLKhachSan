@@ -42,7 +42,7 @@ namespace BangKhachSan
             string gia = dt.Rows[0].ItemArray[0].ToString();
             return gia;
         }
-        public void ThemPhong(string TenPhong,string LoaiPhong)
+        public void ThemPhong(string TenPhong,string LoaiPhong, string TinhTrang, long GiaPhong)
         {
             string sql = "ADDPhong";
             SqlConnection con = new SqlConnection(KetNoi.connect());
@@ -52,13 +52,15 @@ namespace BangKhachSan
 
             cmd.Parameters.AddWithValue("@TenPhong", TenPhong);
             cmd.Parameters.AddWithValue("@LoaiPhong", LoaiPhong);
+            cmd.Parameters.AddWithValue("@TinhTrang", TinhTrang);
+            cmd.Parameters.AddWithValue("@GiaPhong", GiaPhong);
 
             cmd.ExecuteNonQuery();
             cmd.Dispose();
             con.Close();
         }
 
-        public void SuaPhong(string MaPhong,string TenPhong, string LoaiPhong)
+        public void SuaPhong(string MaPhong,string TenPhong, string LoaiPhong, string TinhTrang, long GiaPhong)
         {
             string sql = "SuaPhong";
             SqlConnection con = new SqlConnection(KetNoi.connect());
@@ -66,9 +68,11 @@ namespace BangKhachSan
             SqlCommand cmd = new SqlCommand(sql, con);
             cmd.CommandType = CommandType.StoredProcedure;
 
-            cmd.Parameters.AddWithValue("@MaPhong", MaPhong);
             cmd.Parameters.AddWithValue("@TenPhong", TenPhong);
             cmd.Parameters.AddWithValue("@LoaiPhong", LoaiPhong);
+            cmd.Parameters.AddWithValue("@TinhTrang", TinhTrang);
+            cmd.Parameters.AddWithValue("@GiaPhong", GiaPhong);
+            cmd.Parameters.AddWithValue("@MaPhong", MaPhong);
             cmd.ExecuteNonQuery();
 
             cmd.Dispose();

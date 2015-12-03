@@ -119,5 +119,35 @@ namespace BangKhachSan
             da.Fill(dt);
             return dt;
         }
+
+        //tìm kiếm đồ dùng thwo mã
+        public DataTable TKDD_Ma(string Ma)
+        {
+            string sql = "SELECT * FROM DoDung WHERE MaDD LIKE N'%' + @MaDD + '%'";
+            DataTable dt = new DataTable();
+            SqlConnection con = new SqlConnection(KetNoi.connect());
+            con.Open();
+            SqlCommand cmd = new SqlCommand(sql, con);
+            SqlDataAdapter da = new SqlDataAdapter();
+            cmd.Parameters.AddWithValue("@MaDD", Ma);
+            da.SelectCommand = cmd;
+            da.Fill(dt);
+            return dt;
+        }
+
+        //tìm kiếm đồ dùng theo tên
+        public DataTable TKDD_Ten(string ten)
+        {
+            string sql = "SELECT * FROM DoDung WHERE TenDD LIKE N'%' + @TenDD + '%'";
+            DataTable dt = new DataTable();
+            SqlConnection con = new SqlConnection(KetNoi.connect());
+            con.Open();
+            SqlCommand cmd = new SqlCommand(sql, con);
+            SqlDataAdapter da = new SqlDataAdapter();
+            cmd.Parameters.AddWithValue("@TenDD", ten);
+            da.SelectCommand = cmd;
+            da.Fill(dt);
+            return dt;
+        }
     }
 }

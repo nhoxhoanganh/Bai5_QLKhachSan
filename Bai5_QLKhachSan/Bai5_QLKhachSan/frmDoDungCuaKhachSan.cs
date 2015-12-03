@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using System.Data;
+//using System.Data;
 using KetNoiDB;
 using BangKhachSan;
 
