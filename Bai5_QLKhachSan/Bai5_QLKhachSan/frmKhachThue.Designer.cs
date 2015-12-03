@@ -274,6 +274,7 @@
             // 
             // dgvKhach
             // 
+            this.dgvKhach.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.dgvKhach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKhach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,

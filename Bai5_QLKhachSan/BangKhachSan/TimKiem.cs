@@ -58,7 +58,11 @@ namespace BangKhachSan
         //Show đồ dùng trong phòng theo mã
         public DataTable ShowDoDung_Ma(string MaPhong)
         {
-            string sql = "SELECT * FROM tblPhong WHERE MaPhong=@MaPhong";
+            string sql = string.Format(@"SELECT     dbo.DoDung.MaDD, dbo.DoDung.TenDD, dbo.tblDoDungTrongPhong.SoLuong, dbo.tblDoDungTrongPhong.DonViTinh, dbo.tblDoDungTrongPhong.TinhTrang, dbo.DoDung.GiaMua
+                                        FROM         dbo.tblDoDungTrongPhong INNER JOIN
+                                                              dbo.DoDung ON dbo.tblDoDungTrongPhong.MaDoDung = dbo.DoDung.MaDD INNER JOIN
+                                                              dbo.tblPhong ON dbo.tblDoDungTrongPhong.MaPhong = dbo.tblPhong.MaPhong
+                                        WHERE     (dbo.tblPhong.MaPhong = @MaPhong)");
             DataTable dt = new DataTable();
             SqlConnection con = new SqlConnection(KetNoi.connect());
             con.Open();
@@ -67,6 +71,7 @@ namespace BangKhachSan
             cmd.Parameters.AddWithValue("@MaPhong", MaPhong);
             da.SelectCommand = cmd;
             da.Fill(dt);
+            con.Close();
             return dt;
         }
 

@@ -15,17 +15,21 @@ namespace Bai5_QLKhachSan
     public partial class frmDoDungTheoPhong : Form
     {
         string ma;
-
-        public frmDoDungTheoPhong(string _ma)
+        public frmDoDungTheoPhong()
         {
             InitializeComponent();
+        }
+        public frmDoDungTheoPhong(string _ma)
+        {
             ma = _ma;
+            InitializeComponent(); 
         }
 
         BUS_DoDung dodung = new BUS_DoDung();
         private void frmDoDungTheoPhong_Load(object sender, EventArgs e)
         {
-            HienThi("where MaPhong = '" + ma + "'");
+            if (ma != null) HienThi("where MaPhong = '" + ma + "'");
+            else HienThi("");
         }
         public void HienThi(string DieuKien) 
         {

@@ -13,7 +13,7 @@ namespace KetNoiDB
 
         public static String connect()
         {
-            return (@"Data Source=NHOXHOANGANH\SQLEXPRESS;Initial Catalog=QL_KhachSan;Integrated Security=true;");
+            return (@"Data Source=NHOXHOANGANH\SQLEXPRESS;Initial Catalog=QL_KhachSan;Integrated Security=true");
         }
     }
 }

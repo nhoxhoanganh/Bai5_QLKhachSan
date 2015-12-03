@@ -57,3 +57,21 @@ E:\Hoc tap\Ki I 2015-2016\Thuc tap nhom\Bai5_QLKhachSan\Bai5_QLKhachSan\Bai5_QLK
 E:\Hoc tap\Ki I 2015-2016\Thuc tap nhom\Bai5_QLKhachSan\Bai5_QLKhachSan\Bai5_QLKhachSan\obj\Debug\Bai5_QLKhachSan.csproj.GenerateResource.Cache
 E:\Clone\Bai5_QLKhachSan\Bai5_QLKhachSan\Bai5_QLKhachSan\obj\Debug\Bai5_QLKhachSan.frmDangNhap.resources
 E:\Clone\Bai5_QLKhachSan\Bai5_QLKhachSan\Bai5_QLKhachSan\obj\Debug\Bai5_QLKhachSan.frmKhachThue.resources
+E:\Githubs\Bai5_QLKhachSan\Bai5_QLKhachSan\Bai5_QLKhachSan\obj\Debug\Bai5_QLKhachSan.frmDangNhap.resources
+E:\Githubs\Bai5_QLKhachSan\Bai5_QLKhachSan\Bai5_QLKhachSan\obj\Debug\Bai5_QLKhachSan.frmKhachThue.resources
+E:\Githubs\Bai5_QLKhachSan\Bai5_QLKhachSan\Bai5_QLKhachSan\obj\Debug\Bai5_QLKhachSan.frmQuanLyKhachSan.resources
+<<<<<<< HEAD
+E:\Githubs\Bai5_QLKhachSan\Bai5_QLKhachSan\Bai5_QLKhachSan\obj\Debug\Bai5_QLKhachSan.frmDoDungCuaKhachSan.resources
+E:\Githubs\Bai5_QLKhachSan\Bai5_QLKhachSan\Bai5_QLKhachSan\obj\Debug\Bai5_QLKhachSan.frmChoThuePhong.resources
+=======
+D:\dung\Kì I - Năm 4\Thực tập nhóm\save\Bai5_QLKhachSan\Bai5_QLKhachSan\Bai5_QLKhachSan\obj\Debug\Bai5_QLKhachSan.frmDangNhap.resources
+D:\dung\Kì I - Năm 4\Thực tập nhóm\save\Bai5_QLKhachSan\Bai5_QLKhachSan\Bai5_QLKhachSan\obj\Debug\Bai5_QLKhachSan.frmKhachThue.resources
+D:\dung\Kì I - Năm 4\Thực tập nhóm\save\Bai5_QLKhachSan\Bai5_QLKhachSan\Bai5_QLKhachSan\obj\Debug\Bai5_QLKhachSan.frmQuanLyKhachSan.resources
+D:\dung\Kì I - Năm 4\Thực tập nhóm\save\Bai5_QLKhachSan\Bai5_QLKhachSan\Bai5_QLKhachSan\obj\Debug\Bai5_QLKhachSan.frmTraPhong.resources
+>>>>>>> b744397b4495647afc6d3748bbf03b5175552a95
+E:\Githubs\Bai5_QLKhachSan\Bai5_QLKhachSan\Bai5_QLKhachSan\obj\Debug\Bai5_QLKhachSan.frmTraPhong.resources
+E:\Clone\Bai5_QLKhachSan\Bai5_QLKhachSan\Bai5_QLKhachSan\obj\Debug\Bai5_QLKhachSan.frmChoThuePhong.resources
+E:\Clone\Bai5_QLKhachSan\Bai5_QLKhachSan\Bai5_QLKhachSan\obj\Debug\Bai5_QLKhachSan.frmDoDungCuaKhachSan.resources
+E:\Clone\Bai5_QLKhachSan\Bai5_QLKhachSan\Bai5_QLKhachSan\obj\Debug\Bai5_QLKhachSan.frmHuongDan.resources
+E:\Clone\Bai5_QLKhachSan\Bai5_QLKhachSan\Bai5_QLKhachSan\obj\Debug\Bai5_QLKhachSan.frmQuanLyKhachSan.resources
+E:\Clone\Bai5_QLKhachSan\Bai5_QLKhachSan\Bai5_QLKhachSan\obj\Debug\Bai5_QLKhachSan.frmTraPhong.resources

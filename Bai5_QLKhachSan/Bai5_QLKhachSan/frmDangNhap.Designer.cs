@@ -107,7 +107,7 @@
             this.label1.ForeColor = System.Drawing.Color.Yellow;
             this.label1.Location = new System.Drawing.Point(11, 58);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(327, 22);
+            this.label1.Size = new System.Drawing.Size(326, 22);
             this.label1.TabIndex = 16;
             this.label1.Text = "Đăng nhập hệ thống quản lý khách sạn";
             // 
@@ -164,7 +164,8 @@
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.label13);
             this.Name = "frmDangNhap";
-            this.Text = "frmDangNhap";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Đăng Nhập";
             this.Load += new System.EventHandler(this.frmDangNhap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

@@ -24,7 +24,7 @@ namespace Bai5_QLKhachSan
             {
                 // bool x = false;
                 MessageBox.Show("Bạn đăng nhập thành công ^^", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                frmPHONG frm = new frmPHONG();
+                frmQuanLyKhachSan frm = new frmQuanLyKhachSan();
                 frm.Show();
                 Hide();
             }
