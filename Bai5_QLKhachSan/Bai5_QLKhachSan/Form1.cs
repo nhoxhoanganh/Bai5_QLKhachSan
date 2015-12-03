@@ -23,7 +23,7 @@ namespace Bai5_QLKhachSan
         int chon = 0;
         void KhoaDieuKhien()
         {
-            txtTenphong.Enabled=txtLoaiphong.Enabled= false;
+            txtTenphong.Enabled = txtLoaiphong.Enabled = txtGia.Enabled = cbTinhTrang.Enabled = false;
             btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = true;
             btnLuu.Enabled = false;
             btnDodung.Enabled = false;
@@ -31,7 +31,7 @@ namespace Bai5_QLKhachSan
 
         void MoDieuKhien()
         {
-            txtTenphong.Enabled=txtLoaiphong.Enabled = true;
+            txtTenphong.Enabled = txtLoaiphong.Enabled = txtGia.Enabled = cbTinhTrang.Enabled = true;
             btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = false;
             btnLuu.Enabled = true;
             btnDodung.Enabled = true;
@@ -39,7 +39,7 @@ namespace Bai5_QLKhachSan
 
         void SetNull()
         {
-            txtMaphong.Text = txtTenphong.Text = txtLoaiphong.Text = "";
+            txtMaphong.Text = txtTenphong.Text = txtLoaiphong.Text = txtGia.Text = cbTinhTrang.Text = "";
             txttk_Maphong.Text = txttk_tenphong.Text = txttk_loaiphong.Text = "";
         }
         private void btnThem_Click(object sender, EventArgs e)
@@ -63,7 +63,7 @@ namespace Bai5_QLKhachSan
         }
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if (DialogResult.Yes == MessageBox.Show("Bạn muốn xóa nhân viên này?", "THÔNG BÁO", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+            if (DialogResult.Yes == MessageBox.Show("Bạn muốn xóa Phòng này?", "THÔNG BÁO", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
             {
                 _phong.XoaPhong(txtMaphong.Text);
                 MessageBox.Show("Xóa thành công!");
@@ -79,9 +79,9 @@ namespace Bai5_QLKhachSan
                 if (txtTenphong.Text == "" || txtLoaiphong.Text == "")
                     MessageBox.Show("Mời nhập đầy đủ thông tin!");
                 else
-                    if (DialogResult.Yes == MessageBox.Show("Bạn có muốn thêm nhân viên này?", "THÔNG BÁO", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+                    if (DialogResult.Yes == MessageBox.Show("Bạn có muốn Thêm Phòng này?", "THÔNG BÁO", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
                     {
-                        _phong.ThemPhong(txtTenphong.Text,txtLoaiphong.Text);
+                        _phong.ThemPhong(txtTenphong.Text, txtLoaiphong.Text, cbTinhTrang.Text, long.Parse(txtGia.Text));
                         MessageBox.Show("Thêm thành công!");
                         SetNull();
                         frmPHONG_Load(sender, e);
@@ -92,9 +92,9 @@ namespace Bai5_QLKhachSan
                 if (txtTenphong.Text == "" || txtLoaiphong.Text == "")
                     MessageBox.Show("Mời nhập đầy đủ thông tin!");
                 else
-                    if (DialogResult.Yes == MessageBox.Show("Bạn có muốn Sửa nhân viên này?", "THÔNG BÁO", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+                    if (DialogResult.Yes == MessageBox.Show("Bạn có muốn Sửa Phòng này?", "THÔNG BÁO", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
                     {
-                        _phong.SuaPhong(txtMaphong.Text,txtTenphong.Text,txtLoaiphong.Text);
+                        _phong.SuaPhong(txtMaphong.Text, txtTenphong.Text, txtLoaiphong.Text, cbTinhTrang.Text, long.Parse(txtGia.Text));
                         MessageBox.Show("Sửa thành công!");
                         SetNull();
                         frmPHONG_Load(sender, e);
@@ -110,6 +110,8 @@ namespace Bai5_QLKhachSan
                 txtMaphong.Text = dgvPhong.Rows[e.RowIndex].Cells[0].Value.ToString();
                 txtTenphong.Text = dgvPhong.Rows[e.RowIndex].Cells[1].Value.ToString();
                 txtLoaiphong.Text = dgvPhong.Rows[e.RowIndex].Cells[2].Value.ToString();
+                cbTinhTrang.Text = dgvPhong.Rows[e.RowIndex].Cells[3].Value.ToString();
+                txtGia.Text = dgvPhong.Rows[e.RowIndex].Cells[4].Value.ToString();
               
             }
             catch { }
@@ -140,5 +142,6 @@ namespace Bai5_QLKhachSan
             frmDoDungTheoPhong dodung = new frmDoDungTheoPhong(txtMaphong.Text);
             dodung.Show();
         }
+
     }
 }

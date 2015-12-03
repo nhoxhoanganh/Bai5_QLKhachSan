@@ -25,7 +25,7 @@ namespace Bai5_QLKhachSan
 
         private void quảnLýĐồDùngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmDoDungTheoPhong frm = new frmDoDungTheoPhong();
+            frmDoDung frm = new frmDoDung();
             frm.Show();
         }
 

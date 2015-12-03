@@ -30,6 +30,10 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.cbTinhTrang = new System.Windows.Forms.ComboBox();
+            this.txtGia = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.btnDodung = new System.Windows.Forms.Button();
             this.txtLoaiphong = new System.Windows.Forms.TextBox();
             this.txtTenphong = new System.Windows.Forms.TextBox();
@@ -48,6 +52,8 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txttk_tenphong = new System.Windows.Forms.TextBox();
@@ -78,6 +84,10 @@
             // groupBox5
             // 
             this.groupBox5.BackColor = System.Drawing.Color.Khaki;
+            this.groupBox5.Controls.Add(this.cbTinhTrang);
+            this.groupBox5.Controls.Add(this.txtGia);
+            this.groupBox5.Controls.Add(this.label8);
+            this.groupBox5.Controls.Add(this.label9);
             this.groupBox5.Controls.Add(this.btnDodung);
             this.groupBox5.Controls.Add(this.txtLoaiphong);
             this.groupBox5.Controls.Add(this.txtTenphong);
@@ -92,6 +102,42 @@
             this.groupBox5.TabIndex = 55;
             this.groupBox5.TabStop = false;
             // 
+            // cbTinhTrang
+            // 
+            this.cbTinhTrang.FormattingEnabled = true;
+            this.cbTinhTrang.Items.AddRange(new object[] {
+            "Using",
+            "Empty"});
+            this.cbTinhTrang.Location = new System.Drawing.Point(341, 12);
+            this.cbTinhTrang.Name = "cbTinhTrang";
+            this.cbTinhTrang.Size = new System.Drawing.Size(136, 21);
+            this.cbTinhTrang.TabIndex = 65;
+            // 
+            // txtGia
+            // 
+            this.txtGia.Location = new System.Drawing.Point(341, 45);
+            this.txtGia.Name = "txtGia";
+            this.txtGia.Size = new System.Drawing.Size(136, 20);
+            this.txtGia.TabIndex = 64;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(234, 48);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(56, 13);
+            this.label8.TabIndex = 62;
+            this.label8.Text = "Giá phòng";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(234, 15);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(55, 13);
+            this.label9.TabIndex = 61;
+            this.label9.Text = "Tình trạng";
+            // 
             // btnDodung
             // 
             this.btnDodung.Location = new System.Drawing.Point(237, 109);
@@ -100,17 +146,18 @@
             this.btnDodung.TabIndex = 60;
             this.btnDodung.Text = "Đồ dùng trong phòng";
             this.btnDodung.UseVisualStyleBackColor = true;
+            this.btnDodung.Click += new System.EventHandler(this.btnDodung_Click);
             // 
             // txtLoaiphong
             // 
-            this.txtLoaiphong.Location = new System.Drawing.Point(237, 76);
+            this.txtLoaiphong.Location = new System.Drawing.Point(85, 78);
             this.txtLoaiphong.Name = "txtLoaiphong";
             this.txtLoaiphong.Size = new System.Drawing.Size(136, 20);
             this.txtLoaiphong.TabIndex = 59;
             // 
             // txtTenphong
             // 
-            this.txtTenphong.Location = new System.Drawing.Point(237, 43);
+            this.txtTenphong.Location = new System.Drawing.Point(85, 45);
             this.txtTenphong.Name = "txtTenphong";
             this.txtTenphong.Size = new System.Drawing.Size(136, 20);
             this.txtTenphong.TabIndex = 58;
@@ -118,7 +165,7 @@
             // txtMaphong
             // 
             this.txtMaphong.Enabled = false;
-            this.txtMaphong.Location = new System.Drawing.Point(237, 10);
+            this.txtMaphong.Location = new System.Drawing.Point(85, 12);
             this.txtMaphong.Name = "txtMaphong";
             this.txtMaphong.Size = new System.Drawing.Size(136, 20);
             this.txtMaphong.TabIndex = 57;
@@ -126,7 +173,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(126, 43);
+            this.label6.Location = new System.Drawing.Point(8, 48);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(59, 13);
             this.label6.TabIndex = 56;
@@ -135,7 +182,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(126, 76);
+            this.label5.Location = new System.Drawing.Point(8, 81);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 13);
             this.label5.TabIndex = 55;
@@ -144,7 +191,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(127, 10);
+            this.label4.Location = new System.Drawing.Point(9, 15);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 13);
             this.label4.TabIndex = 54;
@@ -173,6 +220,7 @@
             this.btnHuy.TabIndex = 57;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnLuu
             // 
@@ -182,6 +230,7 @@
             this.btnLuu.TabIndex = 56;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnXoa
             // 
@@ -191,6 +240,7 @@
             this.btnXoa.TabIndex = 55;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -200,6 +250,7 @@
             this.btnSua.TabIndex = 54;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
@@ -209,6 +260,7 @@
             this.btnThem.TabIndex = 53;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // groupBox2
             // 
@@ -227,7 +279,9 @@
             this.dgvPhong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
-            this.Column3});
+            this.Column3,
+            this.Column4,
+            this.Column5});
             this.dgvPhong.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPhong.Location = new System.Drawing.Point(3, 16);
             this.dgvPhong.Name = "dgvPhong";
@@ -255,6 +309,20 @@
             this.Column3.DataPropertyName = "LoaiPhong";
             this.Column3.HeaderText = "Loại phòng";
             this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column4.DataPropertyName = "TinhTrang";
+            this.Column4.HeaderText = "Tình trạng";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column5.DataPropertyName = "GiaPhong";
+            this.Column5.HeaderText = "Giá phòng";
+            this.Column5.Name = "Column5";
             // 
             // groupBox3
             // 
@@ -365,9 +433,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvPhong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.TextBox txttk_tenphong;
         private System.Windows.Forms.TextBox txttk_loaiphong;
         private System.Windows.Forms.TextBox txttk_Maphong;
@@ -386,6 +451,15 @@
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.TextBox txtGia;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox cbTinhTrang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }
 

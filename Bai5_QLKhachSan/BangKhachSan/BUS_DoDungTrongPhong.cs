@@ -29,5 +29,19 @@ namespace BangKhachSan
             con.Close();
             return dt;
         }
+        public void UpdateDoDung_Phong(string MaDoDung, string MaPhong, int SoLuong, string DVTinh, string TinhTrang)
+        {
+            string str = string.Format(@"update tblDoDungTrongPhong
+                                        set SoLuong = " + SoLuong + ", DonViTinh = '" + DVTinh + "', TinhTrang = '" + TinhTrang + "'where MaDoDung = '" + MaDoDung + "' and MaPhong = '" + MaPhong + "'");
+            DataTable dt = new DataTable();
+            SqlConnection con = new SqlConnection(KetNoi.connect());
+            con.Open();
+            SqlCommand cmd = new SqlCommand(str, con);
+            cmd.CommandType = CommandType.Text;
+            cmd.ExecuteNonQuery();
+            con.Close();
+            cmd.Dispose();
+        }
+
     }
 }
