@@ -50,6 +50,7 @@ namespace Bai5_QLKhachSan
 
         public void HienThiDGVDoDung(DataTable dt)
         {
+            dgvDodung.RowCount = 1;
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 dgvDodung.RowCount++;
@@ -63,12 +64,16 @@ namespace Bai5_QLKhachSan
         }
         private void dgvDodung_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtMaPhong.Text = ma;
-            txtMaDoDung.Text = dgvDodung.Rows[e.RowIndex].Cells[0].Value.ToString();
-            txtTen.Text = dgvDodung.Rows[e.RowIndex].Cells[1].Value.ToString();
-            txtSoLuong.Text = dgvDodung.Rows[e.RowIndex].Cells[2].Value.ToString();
-            txtDonVi.Text = dgvDodung.Rows[e.RowIndex].Cells[3].Value.ToString();
-            cbTinhTrang.Text = dgvDodung.Rows[e.RowIndex].Cells[4].Value.ToString();
+            try
+            {
+                txtMaPhong.Text = ma;
+                txtMaDoDung.Text = dgvDodung.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtTen.Text = dgvDodung.Rows[e.RowIndex].Cells[1].Value.ToString();
+                txtSoLuong.Text = dgvDodung.Rows[e.RowIndex].Cells[2].Value.ToString();
+                txtDonVi.Text = dgvDodung.Rows[e.RowIndex].Cells[3].Value.ToString();
+                cbTinhTrang.Text = dgvDodung.Rows[e.RowIndex].Cells[4].Value.ToString();
+            }
+            catch { }
         }
 
         void KhoaDieuKhien()
@@ -103,7 +108,6 @@ namespace Bai5_QLKhachSan
         private void btnSua_Click(object sender, EventArgs e)
         {
             MoDieuKhien();
-            SetNull();
             chon = 2;
         }
 
@@ -166,6 +170,29 @@ namespace Bai5_QLKhachSan
                 Dong_BangDoDung = e.RowIndex;
             }
             catch { }
+        }
+
+        private void buttonLuu_Click(object sender, EventArgs e)
+        {
+            if (chon == 2)
+            {
+                if(MessageBox.Show("Bạn có chắc đã sửa đúng đồ dùng này?", "Cảnh Báo", MessageBoxButtons.YesNo)==DialogResult.Yes)
+                {
+                    dd.UpdateDoDung_Phong(txtMaDoDung.Text, txtMaPhong.Text, int.Parse(txtSoLuong.Text), txtDonVi.Text, cbTinhTrang.Text);
+                    dd.UpdateDoDung_BangDoDung(txtMaDoDung.Text, txtTen.Text);
+                }
+            }
+            HienThiDGVDoDung(dd.ShowDoDung_Ma(ma));
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có chắc muốn xóa đúng đồ dùng này?", "Cảnh Báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                dd.XoaDD_trongPhong(txtMaDoDung.Text, txtMaPhong.Text);
+                HienThiDGVDoDung(dd.ShowDoDung_Ma(ma));
+            }
+
         }
     }
 }

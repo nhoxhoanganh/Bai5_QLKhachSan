@@ -65,6 +65,7 @@
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonLuu = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDodung)).BeginInit();
@@ -76,9 +77,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.buttonLuu);
             this.groupBox1.Controls.Add(this.cbTinhTrang);
             this.groupBox1.Controls.Add(this.btnHuy);
-            this.groupBox1.Controls.Add(this.btnLuu);
             this.groupBox1.Controls.Add(this.btnXoa);
             this.groupBox1.Controls.Add(this.btnSua);
             this.groupBox1.Controls.Add(this.btnThem);
@@ -124,11 +125,11 @@
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(727, 26);
+            this.btnLuu.Location = new System.Drawing.Point(20, 162);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(75, 35);
             this.btnLuu.TabIndex = 61;
-            this.btnLuu.Text = "Lưu";
+            this.btnLuu.Text = "Hoàn Tất";
             this.btnLuu.UseVisualStyleBackColor = true;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
@@ -140,6 +141,7 @@
             this.btnXoa.TabIndex = 60;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -327,6 +329,7 @@
             // 
             this.groupBox3.Controls.Add(this.nbr1);
             this.groupBox3.Controls.Add(this.label7);
+            this.groupBox3.Controls.Add(this.btnLuu);
             this.groupBox3.Controls.Add(this.btnThemDD);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox3.Location = new System.Drawing.Point(547, 171);
@@ -427,6 +430,16 @@
             this.Column11.HeaderText = "Giá mua";
             this.Column11.Name = "Column11";
             // 
+            // buttonLuu
+            // 
+            this.buttonLuu.Location = new System.Drawing.Point(727, 26);
+            this.buttonLuu.Name = "buttonLuu";
+            this.buttonLuu.Size = new System.Drawing.Size(75, 35);
+            this.buttonLuu.TabIndex = 64;
+            this.buttonLuu.Text = "Lưu";
+            this.buttonLuu.UseVisualStyleBackColor = true;
+            this.buttonLuu.Click += new System.EventHandler(this.buttonLuu_Click);
+            // 
             // frmDoDungTheoPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -492,5 +505,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.NumericUpDown nbr1;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button buttonLuu;
     }
 }

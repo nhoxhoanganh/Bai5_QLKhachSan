@@ -42,6 +42,18 @@ namespace BangKhachSan
             con.Close();
             cmd.Dispose();
         }
+        public void UpdateDoDung_BangDoDung(string MaDoDung, string TenDD)
+        {
+            string str = string.Format(@"update DoDung set TenDD = N'" + TenDD + "'where MaDD = '" + MaDoDung + "'");
+            DataTable dt = new DataTable();
+            SqlConnection con = new SqlConnection(KetNoi.connect());
+            con.Open();
+            SqlCommand cmd = new SqlCommand(str, con);
+            cmd.CommandType = CommandType.Text;
+            cmd.ExecuteNonQuery();
+            con.Close();
+            cmd.Dispose();
+        }
         public void ThemDoDung_Phong(string MaDD, string MaPhong, int SoLuong, string DVTinh, string TinhTrang)
         {
             string str = string.Format(@"Insert into tblDoDungTrongPhong (MaDoDung, SoLuong, DonViTinh, TinhTrang, MaPhong) values (@MaDD, @SoLuong, @DVTinh, @TinhTrang, @MaPhong)");
@@ -59,6 +71,17 @@ namespace BangKhachSan
             cmd.Dispose();
             con.Close();
          
+        }
+        public void XoaDD_trongPhong(string MaDD, string MaPhong)
+        {
+            string str = string.Format(@"Delete from tblDoDungTrongPhong where MaDoDung = '" + MaDD + "' and MaPhong = '" + MaPhong + "'");
+            SqlConnection con = new SqlConnection(KetNoi.connect());
+            con.Open();
+            SqlCommand cmd = new SqlCommand(str, con);
+            cmd.CommandType = CommandType.Text;
+            cmd.ExecuteNonQuery();
+            cmd.Dispose();
+            con.Close();
         }
     }
 }
