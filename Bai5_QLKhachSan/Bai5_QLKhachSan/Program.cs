@@ -16,7 +16,7 @@ namespace Bai5_QLKhachSan
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmTraPhong());
+            Application.Run(new frmQuanLyKhachSan());
         }
     }
 }

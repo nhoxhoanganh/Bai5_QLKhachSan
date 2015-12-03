@@ -203,14 +203,14 @@
             // Column2
             // 
             this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.DataPropertyName = "MaDoDung";
+            this.Column2.DataPropertyName = "MaDD";
             this.Column2.HeaderText = "Mã đồ dùng";
             this.Column2.Name = "Column2";
             // 
             // Column3
             // 
             this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.DataPropertyName = "TenDoDung";
+            this.Column3.DataPropertyName = "TenDD";
             this.Column3.HeaderText = "Tên đồ dùng";
             this.Column3.Name = "Column3";
             // 

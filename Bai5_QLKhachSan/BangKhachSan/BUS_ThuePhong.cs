@@ -18,6 +18,7 @@ namespace BangKhachSan
             SqlConnection con = new SqlConnection(KetNoi.connect());
             con.Open();
             SqlCommand cmd = new SqlCommand(str, con);
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@MaKH", MaKH);
             cmd.Parameters.AddWithValue("@NguoiLap", NguoiLap);
             cmd.Parameters.AddWithValue("@TGMuon", TGMuon);
@@ -33,6 +34,7 @@ namespace BangKhachSan
             SqlConnection con = new SqlConnection(KetNoi.connect());
             con.Open();
             SqlCommand cmd = new SqlCommand(str, con);
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@MaHD", MaHD);
             cmd.Parameters.AddWithValue("@MaPhong", MaPhong);
             cmd.Parameters.AddWithValue("@MaDV", MaDV);
@@ -43,7 +45,7 @@ namespace BangKhachSan
         }
         public void UpdateTrangThaiPhong_Thue(string MaPhong)
         {
-            string str = string.Format(@"Update tblPhong set TrangThai = Using where MaPhong = '" + MaPhong + "'");
+            string str = string.Format(@"Update tblPhong set TinhTrang = 'Using' where MaPhong = '" + MaPhong + "'");
             SqlConnection con = new SqlConnection(KetNoi.connect());
             con.Open();
             SqlCommand cmd = new SqlCommand(str, con);

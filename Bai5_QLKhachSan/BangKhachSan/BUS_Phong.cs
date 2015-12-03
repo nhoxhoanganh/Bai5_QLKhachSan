@@ -24,7 +24,7 @@ namespace BangKhachSan
         public DataTable HienThiPhongTrong()
         {
             DataTable dt = new DataTable();
-            string sql = "SELECT * FROM tblPhong where TrangThai = N'Empty'";
+            string sql = "SELECT * FROM tblPhong where TinhTrang = N'Empty'";
             SqlConnection con = new SqlConnection(KetNoi.connect());
             SqlDataAdapter da = new SqlDataAdapter(sql, con);
             da.Fill(dt);

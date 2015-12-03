@@ -18,6 +18,8 @@ namespace Bai5_QLKhachSan
         string MaHD = "";
         BUS_KhachThuePhong kh = new BUS_KhachThuePhong();
         BUS_ThuePhong ThuePhong = new BUS_ThuePhong();
+        BUS_Phong phong = new BUS_Phong();
+        BUS_DichVu dv = new BUS_DichVu();
         public frmChoThuePhong()
         {
             InitializeComponent();
@@ -27,16 +29,22 @@ namespace Bai5_QLKhachSan
         {
             dgvKhachThuePhong.DataSource = kh.HienThiKhach_2TC();
         }
+        public void HienThiPhongTrong_DV()
+        {
+            dgvPhongTrong.DataSource = phong.HienThiPhongTrong();
+            dgvDichVu.DataSource = dv.HienThiDV();
+        }
         private void btnThemKhachMoi_Click(object sender, EventArgs e)
         {
             frmKhachThue frm = new frmKhachThue();
             frm.Show();
-            HienThiListKhach();
+            
         }
 
         private void frmChoThuePhong_Load(object sender, EventArgs e)
         {
             HienThiListKhach();
+            HienThiPhongTrong_DV();
         }
 
         private void dgvKhachThuePhong_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -77,25 +85,47 @@ namespace Bai5_QLKhachSan
 
         private void btnChonPhong_Click(object sender, EventArgs e)
         {
-            try
-            {
+            //try
+            //{
                 DataTable dt = new DataTable();
                 dt = ThuePhong.ThemHoaDon(txtMaKH.Text, "Admin", DateTime.Now);
                 if (dt.Rows.Count < 1)
                     MessageBox.Show("Thêm Hóa Đơn Thất Bại.");
+                else
+                    MessageBox.Show("Thêm Hóa Đơn Thành Công.");
                 MaHD = dt.Rows[0]["MaHD"].ToString();
                 DataTable dt2 = new DataTable();
-                dt2 = ThuePhong.ThemCTHoaDon(MaHD, txtMaPhong.Text, "DV00000001");
-                if (dt2.Rows.Count < 1)
-                    MessageBox.Show("Thêm Chi Tiết Hóa Đơn Thất Bại.");
+                //try
+                //{
+                    dt2 = ThuePhong.ThemCTHoaDon(MaHD, txtMaPhong.Text, "DV00000001");
+                //}
+                //catch {
+        //MessageBox.Show("Thêm Chi Tiết Hóa Đơn Thất Bại.");}
+                //if (dt2.Rows.Count < 1)
+                //    MessageBox.Show("Thêm Chi Tiết Hóa Đơn Thất Bại.");
+                //else
+                //    MessageBox.Show("Thêm Chi Tiết Hóa Đơn Thành Công.");
                 ThuePhong.UpdateTrangThaiPhong_Thue(txtMaPhong.Text);
-            }
-            catch { }
+
+            //}
+            //catch { }
+            HienThiPhongTrong_DV();
         }
 
         private void btnThemDV_Click(object sender, EventArgs e)
         {
             ThuePhong.ThemDV(MaHD, txtMaPhong.Text, txtMaDV.Text);
+            HienThiPhongTrong_DV();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            HienThiListKhach();
+        }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
