@@ -46,5 +46,11 @@ namespace Bai5_QLKhachSan
             frmChoThuePhong frm = new frmChoThuePhong();
             frm.Show();
         }
+
+        private void hướngDẫnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmHuongDan hd = new frmHuongDan();
+            hd.Show();
+        }
     }
 }
