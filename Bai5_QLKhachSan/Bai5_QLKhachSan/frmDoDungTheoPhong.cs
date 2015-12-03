@@ -34,18 +34,33 @@ namespace Bai5_QLKhachSan
             //if (ma != null) HienThi("where MaPhong = '" + ma + "'");
             //else HienThi("");
 
-            dgvDodung.DataSource = dd.ShowDoDung_Ma(ma);
+            HienThiDGVDoDung(dd.ShowDoDung_Ma(ma));
             dgvDD.DataSource = dodung.HienThiDoDung2();
             cbTinhTrang.SelectedIndex = 0;
             KhoaDieuKhien();
-            SoDoDungTrongPhong_Bd = dgvDodung.Rows.Count;
+            SoDoDungTrongPhong_Bd = dgvDodung.RowCount - 1;
         }
         public void HienThi(string DieuKien) 
         {
             txtMaPhong.Text = ma;
-            dgvDodung.DataSource = dodung.HienThiDoDung(DieuKien);
+            DataTable dt = new DataTable();
+            dt = dodung.HienThiDoDung(DieuKien);
+            HienThiDGVDoDung(dt);
         }
 
+        public void HienThiDGVDoDung(DataTable dt)
+        {
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                dgvDodung.RowCount++;
+                dgvDodung.Rows[i].Cells[0].Value = dt.Rows[i][0].ToString();
+                dgvDodung.Rows[i].Cells[1].Value = dt.Rows[i][1].ToString();
+                dgvDodung.Rows[i].Cells[2].Value = dt.Rows[i][2].ToString();
+                dgvDodung.Rows[i].Cells[3].Value = dt.Rows[i][3].ToString();
+                dgvDodung.Rows[i].Cells[4].Value = dt.Rows[i][4].ToString();
+                dgvDodung.Rows[i].Cells[5].Value = dt.Rows[i][5].ToString();
+            }
+        }
         private void dgvDodung_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtMaPhong.Text = ma;
@@ -80,6 +95,7 @@ namespace Bai5_QLKhachSan
             //MoDieuKhien();
             cbTinhTrang.Enabled = true;
             btnThemDD.Enabled = true;
+            btnLuu.Enabled = true;
             SetNull();
             chon = 1;
         }
@@ -100,29 +116,28 @@ namespace Bai5_QLKhachSan
 
         private void btnThemDD_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < dgvDodung.Rows.Count; i++)
+            for (int i = 0; i < dgvDodung.RowCount - 1; i++)
             {
-                if (dgvDodung.Rows[i].Cells[0].Value == dgvDD.Rows[Dong_BangDoDung].Cells[0].Value)
+                if (dgvDodung.Rows[i].Cells[0].Value.ToString() == dgvDD.Rows[Dong_BangDoDung].Cells[0].Value.ToString())
                 {
                     if (MessageBox.Show("Sản phẩm đã có trong phòng, Bạn có muốn thêm số lượng? !!!", "Nhắc nhở", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
                         if (int.Parse(nbr1.Value.ToString()) <= int.Parse(dgvDD.Rows[Dong_BangDoDung].Cells[2].Value.ToString()))
-                            dgvDodung.Rows[i].Cells[0].Value = (int.Parse(dgvDodung.Rows[i].Cells[0].Value.ToString()) + int.Parse(nbr1.Value.ToString())).ToString();
+                            dgvDodung.Rows[i].Cells[2].Value = (int.Parse(dgvDodung.Rows[i].Cells[2].Value.ToString()) + int.Parse(nbr1.Value.ToString())).ToString();
                     return;
                 }
             }
             if (dgvDD.SelectedRows.Count > 0)
             {
-
                 dgvDodung.RowCount++;
-                dgvDodung.Rows[dgvDodung.RowCount - 1].Cells[0].Value = dgvDD.Rows[Dong_BangDoDung].Cells[0].Value.ToString();
-                dgvDodung.Rows[dgvDodung.RowCount - 1].Cells[1].Value = dgvDD.Rows[Dong_BangDoDung].Cells[1].Value.ToString();
+                dgvDodung.Rows[dgvDodung.RowCount - 2].Cells[0].Value = dgvDD.Rows[Dong_BangDoDung].Cells[0].Value.ToString();
+                dgvDodung.Rows[dgvDodung.RowCount - 2].Cells[1].Value = dgvDD.Rows[Dong_BangDoDung].Cells[1].Value.ToString();
                 if (int.Parse(nbr1.Value.ToString()) <= int.Parse(dgvDD.Rows[Dong_BangDoDung].Cells[2].Value.ToString()))
                     dgvDodung.Rows[dgvDodung.RowCount - 2].Cells[2].Value = nbr1.Value;
                 else
                     MessageBox.Show("nhập lại số lượng!", "");
-                dgvDodung.Rows[dgvDodung.RowCount - 1].Cells[3].Value = dgvDD.Rows[Dong_BangDoDung].Cells[3].Value.ToString();
-                dgvDodung.Rows[dgvDodung.RowCount - 1].Cells[5].Value = dgvDD.Rows[Dong_BangDoDung].Cells[4].Value.ToString();
-                dgvDodung.Rows[dgvDodung.RowCount - 1].Cells[4].Value = cbTinhTrang.Text;
+                dgvDodung.Rows[dgvDodung.RowCount - 2].Cells[3].Value = dgvDD.Rows[Dong_BangDoDung].Cells[3].Value.ToString();
+                dgvDodung.Rows[dgvDodung.RowCount - 2].Cells[5].Value = dgvDD.Rows[Dong_BangDoDung].Cells[4].Value.ToString();
+                dgvDodung.Rows[dgvDodung.RowCount - 2].Cells[4].Value = cbTinhTrang.Text;   
             }
         }
 
@@ -132,19 +147,25 @@ namespace Bai5_QLKhachSan
             {
                 dd.UpdateDoDung_Phong(dgvDodung.Rows[i].Cells[0].Value.ToString(), txtMaPhong.Text, int.Parse(dgvDodung.Rows[i].Cells[2].Value.ToString()), dgvDodung.Rows[i].Cells[3].Value.ToString(), dgvDodung.Rows[i].Cells[4].Value.ToString());
             }
-            for(int j = SoDoDungTrongPhong_Bd; j < dgvDodung.RowCount; j++){
-
+            for(int i = SoDoDungTrongPhong_Bd; i < dgvDodung.RowCount - 1; i++){
+                dd.ThemDoDung_Phong(dgvDodung.Rows[i].Cells[0].Value.ToString(), txtMaPhong.Text, int.Parse(dgvDodung.Rows[i].Cells[2].Value.ToString()), dgvDodung.Rows[i].Cells[3].Value.ToString(), dgvDodung.Rows[i].Cells[4].Value.ToString());
             }
+            MessageBox.Show("Thêm Thành Công!");
         }
         int Dong_BangDoDung = 1;
         private void dgvDD_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+
+        }
+
+        private void dgvDD_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
                 Dong_BangDoDung = e.RowIndex;
             }
             catch { }
-
         }
     }
 }
